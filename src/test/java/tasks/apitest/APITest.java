@@ -21,7 +21,7 @@ public class APITest {
         RestAssured
             .given()
             .when()
-                .get("/todo/1")
+                .get("/todo")
             .then()
                 .statusCode(HttpStatus.SC_OK);
     }
