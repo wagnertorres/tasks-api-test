@@ -33,7 +33,7 @@ public class APITest {
                 .contentType(ContentType.JSON)
                 .body("{\"task\": \"Teste via API\", \"dueDate\": \"2021-02-18\"}")
             .when()
-                .post("/todo/")
+                .post("/todo")
             .then()
                 .statusCode(HttpStatus.SC_CREATED);
     }
@@ -45,7 +45,7 @@ public class APITest {
                 .contentType(ContentType.JSON)
                 .body("{\"task\": \"Teste via API\", \"dueDate\": \"2010-12-30\"}")
             .when()
-                .post("/todo/")
+                .post("/todo")
             .then()
                 .statusCode(HttpStatus.SC_BAD_REQUEST)
                 .body("message", CoreMatchers.is("Due date must not be in past"));
