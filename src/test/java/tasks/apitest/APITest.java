@@ -5,13 +5,12 @@ import io.restassured.http.ContentType;
 import org.apache.http.HttpStatus;
 import org.apache.http.protocol.HTTP;
 import org.hamcrest.CoreMatchers;
-import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
+import org.junit.BeforeClass;
+import org.junit.Test;
 
 public class APITest {
 
-    @BeforeAll
+    @BeforeClass
     public static void steup(){
         RestAssured.baseURI = "http://localhost:8001/tasks-backend";
     }
