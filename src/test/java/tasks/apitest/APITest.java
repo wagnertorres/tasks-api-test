@@ -30,7 +30,7 @@ public class APITest {
         RestAssured
             .given()
                 .contentType(ContentType.JSON)
-                .body("{\"task\": \"Teste via API\", \"dueDate\": \"2021-02-18\"}")
+                .body("{\"task\": \"Teste via API\", \"dueDate\": \"2021-07-18\"}")
             .when()
                 .post("/todo")
             .then()
